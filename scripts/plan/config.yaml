@@ -1,0 +1,48 @@
+
+defaults:
+  premise_path: scripts/output/premise.json
+  output_path: scripts/output/plan.json
+  logging_level: debug
+  MODEL:
+    engine: gpt-3.5-turbo 
+    tensor_parallel_size: 1 
+    server_type: openai 
+    host: http://localhost 
+    port: 51119
+    prompt_format: openai-chat
+    temperature: 1.0
+    top_p: 0.99
+    frequency_penalty: 0
+    presence_penalty: 0
+    SETTING:
+      max_tokens: 64
+      stop: ["\n"]
+    ENTITY:
+      max_attempts: 5 
+      min_entities: 3
+      max_entities: 10
+      NAME:
+        max_tokens: 16
+        stop: ["\n", ",", ":", "("]
+      DESCRIPTION:
+        max_tokens: 64
+    OUTLINE:
+      max_attempts: 5
+      expansion_policy: breadth-first 
+      max_depth: 2 
+      context: ancestors-with-siblings 
+      min_children: 1 
+      preferred_max_children: 4
+      max_children: 5
+      EVENT_DEPTH_0: 
+        max_tokens: 128
+      EVENT:
+        frequency_penalty: 1
+        max_tokens: 128
+      SCENE:
+        max_tokens: 64
+       
+      ENTITY_DEPTH_0: 
+        max_tokens: 128
+      ENTITY:
+        max_tokens: 128

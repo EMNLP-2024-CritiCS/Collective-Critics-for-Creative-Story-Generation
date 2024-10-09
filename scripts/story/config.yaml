@@ -1,0 +1,54 @@
+
+defaults:
+  plan_path: scripts/output/final_plan.json
+  output_path: scripts/output/story.txt
+  output_pkl: scripts/output/story.pkl
+  intermediate_prefix: scripts/output/story_partial 
+  delete_old_intermediates: true
+  logging_level: debug 
+  MODEL:
+    engine: gpt-3.5-turbo 
+    tensor_parallel_size: 0 
+    server_type: openai 
+    host: http://localhost
+    port: 51118
+    prompt_format: openai-chat 
+    temperature: 1
+    top_p: 0.99
+    frequency_penalty: 1
+    presence_penalty: 0
+    STORY:
+      rendering_policy: all 
+      min_passages_per_node: 1
+      max_passages_per_node: 3
+      passage_beam_width: 1 
+      outline_node_beam_width: 1 
+      ancestor_nodes_in_premise: true
+      previous_node_entity_descriptions: false 
+      collapse_previous_events: true 
+      include_previous_events: 0 
+      include_next_events: 0 
+      previous_summary_context: previous-node
+      autoregressive_context: current-node 
+      ending_policy: append-node
+      ending_stop: "\n" 
+      include_prefix_space: true 
+      PASSAGE:
+        max_tokens: 64
+        n: 4 
+        stop: ["*"]
+      SUMMARY: 
+        max_tokens: 54
+        stop: ["\n"]
+      SCORE:
+        scorers: ['relevance', 'coherence', 'commentary', 'length']
+        RELEVANCE:
+          max_tokens: 3
+          logprobs: 3
+        COHERENCE:
+          max_tokens: 3
+          logprobs: 3
+          max_prefix_passages: 5 
+        COMMENTARY:
+          max_tokens: 3
+          logprobs: 3

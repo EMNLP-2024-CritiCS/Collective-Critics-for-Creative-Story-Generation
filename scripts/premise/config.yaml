@@ -1,0 +1,21 @@
+
+defaults:
+  output_path: scripts/output/premise.json
+  logging_level: debug 
+  MODEL:
+    engine: gpt-3.5-turbo 
+    tensor_parallel_size: 1
+    server_type: openai 
+    host: http://localhost 
+    port: 51123
+    prompt_format: openai-chat 
+    temperature: 1.2
+    top_p: 0.99
+    frequency_penalty: 0
+    presence_penalty: 0
+    TITLE:
+      max_tokens: 32
+      stop: ["\n"]
+    PREMISE:
+      max_tokens: 128
+      stop: ["\n"]

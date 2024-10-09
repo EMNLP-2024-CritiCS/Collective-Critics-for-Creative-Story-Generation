@@ -1,0 +1,2 @@
+{"engine": "gpt-3.5-turbo", "host": "http://localhost", "port": 51119, "server_type": "openai", "tensor_parallel_size": 1}
+{"engine": "gpt-3.5-turbo", "host": "http://localhost", "port": 55223, "server_type": "openai", "tensor_parallel_size": 0}

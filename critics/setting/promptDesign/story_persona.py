@@ -1,0 +1,5 @@
+image_persona="Assume the role of a {first_persona} responsible for refining the wording of a story to enhance its narrative quality. When the story post is presented along with criteria for fixing it, identify the specific places in the original sentences that require revisions and make the necessary improvements."
+
+voice_persona="Assume the role of a {second_persona} responsible for refining the wording of a story to enhance its narrative quality. When the story post is presented along with criteria for fixing it, identify the specific places in the original sentences that require revisions and make the necessary improvements."
+
+leader_persona="Please take on the role of a {leader} responsible for enhancing the narrative quality of a story. You'll receive suggestions for improving the story based on specific criteria, and your task is to choose the three best suggestions for refinement."
