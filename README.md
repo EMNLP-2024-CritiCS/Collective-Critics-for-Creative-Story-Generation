@@ -34,7 +34,7 @@ bash run_evalaution.sh
 ```
 
 ## Acknowledgments
-Base code is from ["DOC: Improving Long Story Coherence With Detailed Outline Control" paper's code repository](https://github.com/yangkevin2/doc-story-generation), thanks.
+Base code is from ["DOC: Improving Long Story Coherence With Detailed Outline Control"](https://github.com/yangkevin2/doc-story-generation) paper's code repository, thanks.
 
 ## Citation
 
