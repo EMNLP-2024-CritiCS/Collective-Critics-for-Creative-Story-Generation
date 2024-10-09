@@ -26,7 +26,7 @@ bash app.sh
 Within the `scripts/output` directory, you can find generated contents including premises, plans, and long stories. The visualization and interaction with the generated content is facilitated through a Streamlit interface.
 
 ## GPT-4 Automatic Evaluation
-For detailed instructions on running the automatic evaluation scripts, please refer to the separate [Automatic.md](evaluation/automatic.md) file located within the `evaluation` folder.
+For detailed instructions on running the automatic evaluation scripts, please refer to the separate [Automatic.md](evaluation/Automatic.md) file located within the `evaluation` folder.
 
 ```Shell
 cd evalauation
